@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Locations</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="/styles/index.css" />
+        <script>
+            tailwind.config = {
+                content: [],
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            open_sans: ["Open Sans", "sans-serif"],
+                            icons: ["Font Awesome 6 Free"],
+                        },
+                    },
+                },
+            };
+        </script>
+        
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body
+        class="text-slate-900 text-base not-italic normal-nums font-normal accent-auto bg-white box-border block tracking-[normal] leading-6 list-outside list-disc min-h-full text-start indent-[0px] normal-case visible border-separate font-open_sans"
+    >
+        <div class="sticky box-border z-[99999] top-[0%] inset-x-[0%]">
+            <section class="relative bg-white box-border">
+                <div class="box-border px-[5%]">
+                    <div class="items-center box-border flex flex-col justify-start pt-1 pb-0 md:flex-row md:pb-1">
+                        <div class="relative items-start box-border flex basis-[0%] flex-col grow justify-between mr-4 md:items-center md:flex-row md:mr-0">
+                            <div class="relative text-black text-base font-bold items-center box-border gap-x-2 flex flex-col leading-6 text-left z-[900] mr-auto left-[0%] top-[0%] md:text-[13.6px] md:leading-[20.4px]">
+                                <div role="button" class="relative text-neutral-800 text-base box-border leading-6 text-nowrap align-top mb-2 mx-auto pl-5 pr-10 py-2 left-0 top-0 md:text-[13.6px] md:leading-[20.4px] md:mb-0">
+                                    <div
+                                        class="absolute text-base font-normal box-border h-4 leading-4 text-nowrap w-4 ml-auto mr-5 my-auto right-0 inset-y-0 font-webflow_icons md:text-[13.6px] md:h-[13.6px] md:leading-[13.6px] md:w-[13.6px] before:accent-auto before:text-neutral-800 before:text-base before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:text-left before:indent-[0px] before:normal-case before:text-nowrap before:visible before:border-separate before:font-webflow_icons before:md:text-[13.6px] before:md:leading-[13.6px]"
+                                    ></div>
+                                    <div class="text-base box-border leading-6 text-nowrap md:text-[13.6px] md:leading-[20.4px]">Language</div>
+                                </div>
+                                <!--<nav class="absolute text-base bg-zinc-300 box-border hidden leading-6 min-w-full z-[4] left-[0%] top-[0%] md:text-[13.6px] md:leading-[20.4px]">
+                                    <div class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                        <div role="list" class="text-base box-border leading-6 overflow-hidden md:text-[13.6px] md:leading-[20.4px] md:overflow-visible">
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/locations" class="text-sky-600 text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">English</a>
+                                            </div>
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/es-us/locations" class="text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">Spanish (United States)</a>
+                                            </div>
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/so/locations" class="text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">Somali</a>
+                                            </div>
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/fr/locations" class="text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">French (Standard)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>-->
+                            </div>
+                            <div class="items-center box-border gap-x-2 hidden justify-end min-h-0 min-w-0 gap-y-2 md:gap-x-0 md:flex md:min-h-[auto] md:min-w-[auto] md:gap-y-0">
+                                <div class="items-start box-border flex flex-col justify-start min-h-0 min-w-0 mb-2 md:[align-items:normal] md:block md:flex-row md:justify-normal md:min-h-[auto] md:min-w-[auto] md:mb-0">
+                                    <form class="items-center box-border flex mr-2">
+                                        <input
+                                            name="query"
+                                            placeholder="Search…"
+                                            type="search"
+                                            class="text-zinc-800 text-xs box-border block h-[38px] leading-[17.1428px] min-h-0 min-w-40 align-middle w-full border border-stone-300 px-3 py-2 border-solid md:min-h-[auto] md:min-w-[auto]"
+                                        />
+                                        <input type="submit" value="search" class="text-white text-xs bg-sky-600 box-border block leading-[18px] min-h-0 min-w-0 text-center text-nowrap px-[15px] py-[9px] md:min-h-[auto] md:min-w-[auto]" />
+                                    </form>
+                                </div>
+                                <div class="relative box-border inline-block min-h-0 min-w-0 text-left w-full z-[1] mx-auto md:block md:min-h-[auto] md:min-w-[auto] md:w-auto">
+                                    <div role="button" class="relative text-neutral-800 box-border inline-block text-nowrap align-top mx-auto"></div>
+                                </div>
+                                <div class="relative box-border inline-block min-h-0 min-w-0 text-left w-full z-[1] mx-auto md:block md:min-h-[auto] md:min-w-[auto] md:w-auto">
+                                    <div role="button" class="relative text-neutral-800 box-border inline-block text-nowrap align-top mx-auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-start box-border gap-x-3 grid auto-cols-max grid-flow-col grid-cols-[max-content] grid-rows-[auto] justify-items-start gap-y-0">
+                            <a href="https://www.facebook.com/partnersmn" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-blue-600 text-[15px] box-border h-6 leading-[22.5px] w-6 md:text-sm md:leading-[21px] before:accent-auto before:text-blue-600 before:table before:text-[15px] before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[22.5px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans before:md:text-sm before:md:leading-[21px] after:accent-auto after:clear-both after:text-blue-600 after:table after:text-[15px] after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[22.5px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans after:md:text-sm after:md:leading-[21px]"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-[15px] box-border h-full leading-[22.5px] w-full md:text-sm md:leading-[21px]">
+                                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/partners_in_excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-fuchsia-700 box-border h-6 w-6 before:accent-auto before:text-fuchsia-700 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-fuchsia-700 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="box-border h-6 w-6">
+                                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="#" class="text-black text-sm items-center box-border hidden leading-[21px] max-w-full">
+                                <div
+                                    class="text-sky-500 box-border h-6 w-6 before:accent-auto before:text-sky-500 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-500 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="box-border h-full w-full">
+                                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/partners-in-excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-sky-600 box-border h-6 w-6 before:accent-auto before:text-sky-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="box-border h-6 w-6">
+                                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/@partnersmn2539" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-red-600 box-border h-6 w-6 before:accent-auto before:text-red-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-red-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="box-border h-full w-full">
+                                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.tiktok.com/@partners_in_excellence" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-black box-border h-6 w-6 before:accent-auto before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="box-border h-full w-full">
+                                      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div
+                role="banner"
+                class="sticky items-center bg-zinc-100 box-border flex min-h-16 w-full z-[80] px-[5%] md:min-h-[72px] before:accent-auto before:text-slate-900 before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-slate-900 after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+            >
+                <div class="items-center box-border flex h-full justify-between w-full mx-auto">
+                    <a href="/" aria-label="home" class="relative text-zinc-800 box-border block float-left">
+                        <img src="/assets/logo website.png" alt="" class="box-border inline-block max-w-full w-[167px] py-[5%]" />
+                    </a>
+                    <nav
+                        role="navigation"
+                        class="absolute items-center bg-zinc-100 border-l-slate-900 border-r-slate-900 border-t-slate-900 box-border hidden float-none h-[1000px] min-h-0 min-w-0 overflow-auto pt-4 pb-24 px-[5%] border-b-black border-b md:static md:bg-transparent md:border-b-slate-900 md:flex md:float-right md:h-auto md:min-h-[auto] md:min-w-[auto] md:overflow-visible md:p-0 md:border-b-0"
+                    >
+                        <a
+                            href="/pages/about.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            About
+                        </a>
+                        <a
+                            href="/pages/career.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Careers
+                        </a>
+                        <a
+                            href="/pages/enrollment.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Enrollment
+                        </a>
+                        <a
+                            href="/pages/events.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Events
+                        </a>
+                        <a
+                            href="/pages/locations.html"
+                            class="relative text-sky-600 text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Locations
+                        </a>
+                        <div class="relative text-lg box-border inline-block leading-[27px] min-h-0 min-w-0 text-left w-full z-[900] mx-auto md:text-base md:block md:leading-6 md:min-h-[auto] md:min-w-[auto] md:w-auto">
+                            <div role="button" class="relative text-black text-base font-bold items-center box-border gap-x-2 flex leading-6 text-nowrap align-top mx-auto pl-0 pr-4 py-3 md:text-[13.6px] md:leading-[20.4px] md:pl-4 md:py-2">
+                                <div class="text-base box-border leading-6 min-h-0 min-w-0 text-nowrap md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto]">Services</div>
+                                <div
+                                    class="text-base items-center box-border flex flex-col h-4 justify-center leading-6 min-h-0 min-w-0 text-nowrap w-4 right-[0%] md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:right-auto before:accent-auto before:text-black before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:min-h-0 before:min-w-0 before:text-left before:indent-[0px] before:normal-case before:text-nowrap before:visible before:border-separate before:font-open_sans before:md:text-[13.6px] before:md:leading-[20.4px] before:md:min-h-[auto] before:md:min-w-[auto] after:accent-auto after:clear-both after:text-black after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:min-h-0 after:min-w-0 after:text-left after:indent-[0px] after:normal-case after:text-nowrap after:visible after:border-separate after:font-open_sans after:md:text-[13.6px] after:md:leading-[20.4px] after:md:min-h-[auto] after:md:min-w-[auto]"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-base box-border h-full leading-6 text-nowrap w-full md:text-[13.6px] md:leading-[20.4px]">
+                                      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <nav class="static text-lg bg-zinc-300 box-border hidden h-0 leading-[27px] min-w-full opacity-100 overflow-hidden md:absolute md:text-base md:h-auto md:leading-6 md:opacity-0 md:overflow-visible">
+                                <a href="/pages/dropdowns/all-services.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    All Services
+                                </a>
+                                <a href="/pages/dropdowns/avavb.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    ABA/AVB Therapy
+                                </a>
+                                <a href="/pages/dropdowns/feed.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    Feeding Therapy
+                                </a>
+                                <a href="/pages/dropdowns/occup.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    Occupational Therapy
+                                </a>
+                                <a
+                                    href="/pages/dropdowns/speech.html"
+                                    class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2"
+                                >
+                                    Speech Therapy
+                                </a>
+                                <a href="/pages/dropdowns/bridges.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">Bridges</a>
+                                <a href="/pages/dropdowns/cs-mgmt.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    Case Management
+                                </a>
+                            </nav>
+                        </div>
+                        <div
+                            class="items-stretch box-border gap-x-4 flex flex-col auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto_auto] min-h-0 min-w-0 gap-y-4 ml-0 mt-6 md:items-center md:flex-row md:grid-cols-[1fr_1fr] md:grid-rows-[auto] md:min-h-[auto] md:min-w-[auto] md:ml-4 md:mt-0"
+                        >
+                            <a href="#" class="text-black font-bold box-border block min-h-0 min-w-0 text-center border border-cyan-500 px-5 py-2 rounded-[10px] border-solid md:min-h-[auto] md:min-w-[auto]">952-746-5350</a>
+                            <a href="/pages/contact-us.html" class="text-white font-bold bg-sky-600 box-border block min-h-0 min-w-0 text-center border border-cyan-500 px-5 py-2 rounded-[10px] border-solid md:min-h-[auto] md:min-w-[auto]">
+                                Contact Us
+                            </a>
+                        </div>
+                    </nav>
+                    <div aria-label="menu" role="button" class="relative text-2xl box-border block float-right leading-9 min-h-[auto] min-w-[auto] md:hidden md:min-h-0 md:min-w-0">
+                        <div class="items-center box-border flex flex-col h-12 justify-center w-12 -mr-2 md:[align-items:normal] md:block md:flex-row md:h-auto md:justify-normal md:w-auto md:mr-0">
+                            <div class="bg-black box-border h-0.5 min-h-[auto] min-w-[auto] w-6 md:bg-transparent md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>
+                            <div
+                                class="items-center bg-black box-border flex h-0.5 justify-center min-h-[auto] min-w-[auto] w-6 my-1.5 md:[align-items:normal] md:bg-transparent md:block md:h-auto md:justify-normal md:min-h-0 md:min-w-0 md:w-auto md:my-0"
+                            >
+                                <div class="box-border h-0 min-h-[auto] min-w-[auto] w-1 md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>
+                            </div>
+                            <div class="bg-black box-border h-0.5 min-h-[auto] min-w-[auto] w-6 md:bg-transparent md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute box-border hidden w-full overflow-hidden top-full inset-x-0"></div>
+            </div>
+        </div>
+        <header class="bg-zinc-100 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="box-border py-12 md:py-20">
+                        <div class="box-border">
+                            <div class="box-border text-center">
+                                <div class="box-border max-w-screen-md w-full mx-auto">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="text-black text-[32px] font-bold box-border leading-[38.4px] md:text-[40px] md:leading-[48px]">Partners In Excellence Locations</h1></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="bg-green-700 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-[880px] w-full mx-auto">
+                    <div class="box-border py-12 md:py-20">
+                        <div class="box-border">
+                            <div class="items-center box-border gap-x-12 grid auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] gap-y-12 md:gap-x-20 md:gap-y-16">
+                                <div class="box-border">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="text-white text-[32px] font-bold box-border leading-[38.4px] text-left md:text-[40px] md:leading-[48px]">Head Office</h1></div>
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="text-white font-light box-border tracking-[1px] text-left capitalize">Srinagar</h1></div>
+                                    <p class="text-white text-sm box-border leading-[21px] text-left">
+                                        <strong class="font-bold box-border">Phone:</strong> 889-999-2867<br class="box-border" />
+                                        <!--<strong class="font-bold box-border">Fax: </strong>
+                                        952-746-6131<br class="box-border" />-->
+                                        <strong class="font-bold box-border">Add.: </strong>
+                                        IST Floor Al - Khalifa Complex, Khalifapor, Khanyar, Srinagar, 190003 J&K INDIA <br class="box-border" />
+                                        <strong class="font-bold box-border">
+                                            <br class="box-border" />
+                                            Hours:
+                                        </strong>
+                                        Monday - Friday, 8 AM - 5 PM<br class="box-border" />
+                                        <br class="box-border" />
+                                        <strong class="font-bold box-border">Directions:</strong>
+                                        ‍<br class="box-border" />
+                                    </p>
+                                    <div class="items-center box-border gap-x-4 flex flex-wrap gap-y-4 mt-3 md:mt-8">
+                                        <a
+                                            href="https://maps.apple.com/?address=4255%20Lexington%20Ave%20N,%20Saint%20Paul,%20MN%20%2055126,%20United%20States&ll=45.070519,-93.150490&q=4255%20Lexington%20Ave%20N&t=h"
+                                            class="text-sky-600 font-bold items-center bg-white box-border gap-x-3 flex justify-center max-w-full gap-y-3 text-center border border-cyan-500 px-6 py-3 rounded-[10px] border-solid"
+                                        >
+                                            <div class="box-border">Apple Maps</div>
+                                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/678045eef4fde32533c264e5_apple_maps_4.webp" sizes="(max-width: 1000px) 100vw, 1000px" alt="" class="box-border h-6 max-w-full w-6" />
+                                        </a>
+                                        <a
+                                            href="https://maps.app.goo.gl/PF4G8tg8Wawr9YHH9?g_st=com.google.maps.preview.copy"
+                                            class="text-sky-600 font-bold items-center bg-white box-border gap-x-3 flex justify-center max-w-full gap-y-3 text-center border border-cyan-500 px-6 py-3 rounded-[10px] border-solid"
+                                        >
+                                            <div class="box-border">Google Maps</div>
+                                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/678046525bd5adb4245dfb04_google_maps.avif" alt="" class="box-border h-6 max-w-full w-6" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="#" aria-label="open lightbox" class="relative text-black items-center box-border flex justify-center max-w-full underline w-full overflow-hidden rounded-[10px]">
+                                    <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/66c385b3874dcd29eadf878a_placeholder-video-thumbnail.svg" alt="" class="box-border h-full max-w-full object-cover w-full md:h-auto md:w-auto" />
+                                    <div class="absolute text-white items-center box-border flex justify-center z-[2]">
+                                        <div
+                                            class="items-center box-border flex flex-col h-20 justify-center w-20 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                        >
+                                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/icon-10.svg" alt="Icon" class="box-border h-full w-full" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute bg-red-600/80 bg-[url('https://cdn.prod.website-files.com/66c385b3874dcd29eadf8775/677d9df91004e7ad96ff4858_Partners%20Arden%20Hills-1.jpg')] bg-cover box-border z-[1] bg-center rounded-[10px] inset-[0%]"
+                                    ></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="text-white bg-sky-600 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-[880px] w-full mx-auto">
+                    <div class="box-border py-12 md:py-20">
+                        <div class="box-border">
+                            <div class="items-center box-border gap-x-12 grid auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] gap-y-12 md:gap-x-20 md:gap-y-16">
+                                <div class="box-border">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="text-[32px] font-bold box-border leading-[38.4px] text-left md:text-[40px] md:leading-[48px]">Branch Office</h1></div>
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="font-light box-border capitalize">Srinagar</h1></div>
+                                    <p class="text-sm box-border leading-[21px]">
+                                        <strong class="font-bold box-border">Phone: </strong> 889-999-2867
+                                        <strong class="font-bold box-border">
+                                            <br class="box-border" />
+                                            Add. : 2ND Floor, Sky City, Sanat Nagar, <br>Opp. : SIDCO Industrial Estate, Srinagar, 190005 J&K INDIA
+                                        </strong>
+                                        
+                                        <strong class="font-bold box-border">
+                                            <br class="box-border" />
+                                            <br class="box-border" />
+                                            Hours:
+                                        </strong>
+                                        Monday - Friday, 8 AM - 5 PM
+                                        <strong class="font-bold box-border">
+                                            <br class="box-border" />
+                                            <br class="box-border" />
+                                            Directions:
+                                        </strong>
+                                        <br class="box-border" />
+                                    </p>
+                                    <div class="items-center box-border gap-x-4 flex flex-wrap gap-y-4 mt-3 md:mt-8">
+                                        <a
+                                            href="https://maps.apple.com/?address=14301%20Ewing%20Ave%20S,%20Burnsville,%20MN%20%2055306,%20United%20States&auid=2735611454671163418&ll=44.744764,-93.326711&lsp=9902&q=Partners%20In%20Excellence&t=h"
+                                            class="text-sky-600 font-bold items-center bg-white box-border gap-x-3 flex justify-center max-w-full gap-y-3 text-center border border-cyan-500 px-6 py-3 rounded-[10px] border-solid"
+                                        >
+                                            <div class="box-border">Apple Maps</div>
+                                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/678045eef4fde32533c264e5_apple_maps_4.webp" sizes="(max-width: 1000px) 100vw, 1000px" alt="" class="box-border h-6 max-w-full w-6" />
+                                        </a>
+                                        <a
+                                            href="https://maps.app.goo.gl/ByUGAZH1dDGRJ9r59?g_st=com.google.maps.preview.copy"
+                                            class="text-sky-600 font-bold items-center bg-white box-border gap-x-3 flex justify-center max-w-full gap-y-3 text-center border border-cyan-500 px-6 py-3 rounded-[10px] border-solid"
+                                        >
+                                            <div class="box-border">Google Maps</div>
+                                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/678046525bd5adb4245dfb04_google_maps.avif" alt="" class="box-border h-6 max-w-full w-6" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="#" aria-label="open lightbox" class="relative text-black items-center box-border flex justify-center max-w-full underline w-full overflow-hidden rounded-[10px]">
+                                    <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/66c385b3874dcd29eadf878a_placeholder-video-thumbnail.svg" alt="" class="box-border h-full max-w-full object-cover w-full md:h-auto md:w-auto" />
+                                    <div class="absolute text-white items-center box-border flex justify-center z-[2]">
+                                        <div
+                                            class="items-center box-border flex flex-col h-20 justify-center w-20 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                        >
+                                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/icon-10.svg" alt="Icon" class="box-border h-full w-full" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute bg-red-600/80 bg-[url('https://cdn.prod.website-files.com/66c385b3874dcd29eadf8775/677d9e34ff2f1b483efcf206_Partners%20Burnsville-1.jpg')] bg-cover box-border z-[1] rounded-[10px] inset-[0%]"
+                                    ></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="bg-white box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="box-border">
+                            <div class="items-start box-border gap-x-5 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-5 md:gap-x-20 md:gap-y-16">
+                                <div class="box-border">
+                                    <div class="box-border max-w-xs w-full mx-auto">
+                                        <div class="items-stretch bg-white box-border flex-col justify-start border overflow-hidden rounded-[10px] border-solid">
+                                            <div class="text-white items-center bg-red-600 box-border gap-x-6 flex justify-between gap-y-6 px-5 py-4 md:px-6 md:py-5">
+                                                <div class="text-base font-bold box-border leading-6 text-left md:text-lg md:leading-[27px]">Upcoming Closed Days:</div>
+                                                <div class="self-start box-border flex w-7 md:w-8">
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-8 justify-center w-8 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <svg class="box-border h-full w-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-border h-0 w-full overflow-hidden px-5 md:px-6">
+                                                <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                                    <p class="box-border pt-4">
+                                                        September 1 2025<br class="box-border" />
+                                                        November 27 2025<br class="box-border" />
+                                                        November 28 2025<br class="box-border" />
+                                                        December 24 2025<br class="box-border" />
+                                                        December 25 2025<br class="box-border" />
+                                                        December 26 2025<br class="box-border" />
+                                                        January 2 2026<br class="box-border" />
+                                                        July 3 2026
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative text-white box-border mx-[5%] my-[3%]">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="relative box-border z-[1]">
+                            <div class="box-border text-center">
+                                <div class="box-border max-w-screen-md w-full mx-auto">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                        <h2 class="text-white text-4xl font-bold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">Join a Team That Cares as Much as You Do</h2>
+                                    </div>
+                                    <p class="text-white text-base box-border leading-6 md:text-lg md:leading-[27px]">Help kids reach their potential while building a career you’re proud of.</p>
+                                    <div class="box-border mt-6 md:mt-8">
+                                        <div class="items-center box-border gap-x-4 flex flex-wrap justify-center gap-y-4">
+                                            <a href="/pages/enrollment.html" class="text-white font-bold bg-red-600 box-border block border border-cyan-500 px-6 py-3 rounded-[10px] border-solid">Apply Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))] box-border z-0 rounded-[25px] inset-[0%]">
+                <div class="absolute bg-transparent bg-[linear-gradient(140deg,rgba(11,113,195,0.51),rgba(16,178,215,0.9))] box-border z-[1] rounded-[25px] inset-[0%]"></div>
+                <img
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    alt=""
+                    src="/assets/add 2.jpg"
+                    class="absolute box-border h-full max-w-full object-cover w-full rounded-[25px] inset-[0%]"
+                />
+            </div>
+        </section>
+        <section class="sticky bg-zinc-100 border-l-slate-900 border-r-slate-900 border-t-slate-900 box-border block z-[4] border-b bottom-0 md:relative md:bg-white md:hidden md:z-auto md:bottom-auto">
+            <div class="box-border px-[5%]">
+                <div class="items-center box-border flex flex-col justify-start text-center py-2 md:flex-row md:text-start md:py-3">
+                    <div class="items-start box-border flex basis-[0%] grow min-h-[auto] min-w-[auto] text-center mb-4 mx-auto md:items-center md:min-h-0 md:min-w-0 md:text-start md:ml-0 md:mr-8 md:mb-0">
+                        <div class="box-border hidden shrink-0 text-center mr-4 md:block md:text-start">
+                            <img src="https://c.animaapp.com/md8cp78jCoWLOy/assets/61f754bf565c727dd335ab33_icon.svg" alt="" class="box-border inline-block h-8 max-w-full text-center w-8 md:text-start" />
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center md:min-h-0 md:min-w-0 md:text-start"><div class="font-semibold box-border text-center md:text-start">Contact Us Now</div></div>
+                    </div>
+                    <div class="box-border flex justify-center min-h-[auto] min-w-[auto] text-center md:justify-normal md:min-h-0 md:min-w-0 md:text-start">
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 mr-4 md:min-h-0 md:min-w-0 md:text-start md:ml-4 md:mr-0">
+                            <a
+                                href="/pages/enrollment.html"
+                                class="text-white text-xs font-bold bg-sky-600 box-border inline-block leading-[18px] text-center border border-cyan-500 px-4 py-2 rounded-[10px] border-solid md:text-base md:leading-6 md:px-5"
+                            >
+                                Contact
+                            </a>
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 md:min-h-0 md:min-w-0 md:text-start md:ml-4">
+                            <a
+                                href="tel://+19527465350"
+                                class="text-black text-xs font-bold bg-white box-border inline-block leading-[18px] text-center border px-4 py-2 rounded-[10px] border-solid border-white md:text-base md:leading-6 md:px-5"
+                            >
+                                952-746-5350
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-white bg-slate-900 box-border">
+            <svg viewBox="0 0 1440 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative box-border inline-block max-w-full align-top w-full">
+                <rect width="142.466" height="7.30594" fill="#10B2D7"/>
+                <rect x="1297.54" width="142.466" height="7.30594" fill="#FFF200"/>
+                <rect x="142.465" width="385.023" height="7.30594" fill="#A3CD39"/>
+                <rect x="527.488" width="385.023" height="7.30594" fill="#2F853F"/>
+                <rect x="912.512" width="385.023" height="7.30594" fill="#ED1C24"/>
+            </svg>
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="box-border pt-32 pb-8">
+                        <div class="box-border pb-12 md:pb-20">
+                            <div class="items-start box-border gap-x-8 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-10 md:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] md:gap-y-4">
+                                <a
+                                    href="#"
+                                    class="relative text-zinc-800 box-border block float-left col-end-[span_1] col-start-[span_1] row-end-[span_1] row-start-[span_1] md:col-end-auto md:col-start-auto md:row-end-auto md:row-start-auto"
+                                >
+                                    <img alt="" src="/assets/logo website.png" class="box-border inline-block h-full max-w-full min-w-[50%] w-full pt-[10%]" />
+                                </a>
+                                <div class="box-border">
+                                    <div class="box-border mb-3 md:mb-8"><div class="text-cyan-500 font-semibold box-border">Hours</div></div>
+                                    <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                        <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                            <p class="text-[14.4px] font-light box-border leading-[21.6px] text-left">
+                                                <strong class="font-bold box-border">Open: <br class="box-border" /> </strong> Mon. - Fri. <br class="box-border" />
+                                                8 AM - 5 PM
+                                            </p>
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="text-[14.4px] font-light box-border leading-[21.6px] text-left"><strong class="font-bold box-border">Closed the Following: </strong> ‍</p>
+                                            <p class="box-border pt-4">
+                                                January 1<br class="box-border" />
+                                                May 26<br class="box-border" />
+                                                July 4<br class="box-border" />
+                                                September 1<br class="box-border" />
+                                                November 27<br class="box-border" />
+                                                November 28<br class="box-border" />
+                                                December 24<br class="box-border" />
+                                                December 25<br class="box-border" />
+                                                December 26
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border">
+                                        <div class="box-border mb-3 md:mb-8"><div class="text-green-700 font-semibold box-border">More</div></div>
+                                        <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                            <a href="/pages/about.html" class="text-sm box-border block leading-[21px] py-2">About Us</a>
+                                            <a href="/pages/career.html" class="text-sm box-border block leading-[21px] py-2">Careers</a>
+                                            <a href="/pages/enrollment.html" class="text-sm box-border block leading-[21px] py-2">Enrollment</a>
+                                            <a href="/pages/events.html" class="text-sm box-border block leading-[21px] py-2">Events</a>
+                                            <a href="#" class="text-sm box-border block leading-[21px] py-2">FAQs</a>
+                                            <a href="#" class="text-sm box-border block leading-[21px] py-2">Resources</a>
+                                            <a href="#" class="text-sm box-border block leading-[21px] py-2">Store</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border mb-3 md:mb-8"><div class="text-lime-400 font-semibold box-border">Services</div></div>
+                                    <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                        <a href="/pages/dropdowns/avavb.html" class="text-sm box-border block leading-[21px] py-2">ABA/AVB</a>
+                                        <a href="/pages/dropdowns/bridges.html" class="text-sm box-border block leading-[21px] py-2">Bridges</a>
+                                        <a href="/pages/dropdowns/feed.html" class="text-sm box-border block leading-[21px] py-2">Feeding Therapy</a>
+                                        <a href="/pages/dropdowns/speech.html" class="text-sm box-border block leading-[21px] py-2">Speech &amp; Language Pathology</a>
+                                        <a href="/pages/dropdowns/occup.html" class="text-sm box-border block leading-[21px] py-2">Occupational Therapy</a>
+                                        <a href="/pages/dropdowns/cs-mgmt.html" class="text-sm box-border block leading-[21px] py-2">Case Management</a>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border mb-3 md:mb-8"><div class="text-red-600 font-semibold box-border">Locations</div></div>
+                                    <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Arden Hills</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Burnsville</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Minnetonka</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">LaCrosse</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Winona</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-yellow-400 box-border h-px w-full"></div>
+                        <div class="box-border pt-6 md:pt-8">
+                            <div class="items-start box-border flex flex-col-reverse justify-start pb-4 md:items-center md:flex-row md:justify-between md:pb-0">
+                                <div class="box-border gap-x-0 flex flex-col auto-cols-max grid-flow-row grid-cols-[max-content] grid-rows-[auto] justify-center gap-y-4 md:gap-x-6 md:flex-row md:grid-flow-col md:gap-y-0">
+                                    <div class="text-sm box-border col-end-2 col-start-1 row-end-5 row-start-4 leading-[21px] order-1 mt-4 md:col-end-auto md:col-start-auto md:row-end-auto md:row-start-auto md:order-none md:mt-0">
+                                        © 2025 Partners. All rights reserved.
+                                    </div>
+                                    <a href="#" class="text-sm font-light box-border block leading-[21px]">Website by Kamran Hassan</a>
+                                    <a href="#" class="text-sm font-light box-border block leading-[21px]">Privacy Policy</a>
+                                    <a href="#" class="text-sm font-light box-border block leading-[21px]">Terms of Use</a>
+                                </div>
+                                <div class="items-start box-border gap-x-3 flex auto-cols-max grid-flow-col grid-cols-[max-content] grid-rows-[auto] justify-items-start gap-y-0 mb-8 md:mb-0">
+                                    <div class="items-start box-border gap-x-3 grid auto-cols-max grid-flow-col grid-cols-[max-content] grid-rows-[auto] justify-items-start gap-y-0">
+                                        <a href="https://www.facebook.com/partnersmn" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-blue-600 text-[15px] box-border h-6 leading-[22.5px] w-6 md:text-sm md:leading-[21px] before:accent-auto before:text-blue-600 before:table before:text-[15px] before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[22.5px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans before:md:text-sm before:md:leading-[21px] after:accent-auto after:clear-both after:text-blue-600 after:table after:text-[15px] after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[22.5px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans after:md:text-sm after:md:leading-[21px]"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[15px] box-border h-full leading-[22.5px] w-full md:text-sm md:leading-[21px]">
+                                                    <path d="M22 12.0611C22 6.50451 17.5229 2 12 2C6.47715 2 2 6.50451 2 12.0611C2 17.0828 5.65684 21.2452 10.4375 22V14.9694H7.89844V12.0611H10.4375V9.84452C10.4375 7.32296 11.9305 5.93012 14.2146 5.93012C15.3088 5.93012 16.4531 6.12663 16.4531 6.12663V8.60261H15.1922C13.95 8.60261 13.5625 9.37822 13.5625 10.1739V12.0611H16.3359L15.8926 14.9694H13.5625V22C18.3432 21.2452 22 17.083 22 12.0611Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.instagram.com/partners_in_excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-fuchsia-700 box-border h-6 w-6 before:accent-auto before:text-fuchsia-700 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-fuchsia-700 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-6 w-6">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="text-black text-sm items-center box-border hidden leading-[21px] max-w-full">
+                                            <div
+                                                class="text-sky-500 box-border h-6 w-6 before:accent-auto before:text-sky-500 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-500 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-full w-full">
+                                                    <path d="M17.1761 4H19.9362L13.9061 10.7774L21 20H15.4456L11.0951 14.4066L6.11723 20H3.35544L9.80517 12.7508L3 4H8.69545L12.6279 9.11262L17.1761 4ZM16.2073 18.3754H17.7368L7.86441 5.53928H6.2232L16.2073 18.3754Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/partners-in-excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-sky-600 box-border h-6 w-6 before:accent-auto before:text-sky-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-6 w-6">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.youtube.com/@partnersmn2539" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-red-600 box-border h-6 w-6 before:accent-auto before:text-red-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-red-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-full w-full">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5686 4.77345C21.5163 5.02692 22.2555 5.76903 22.5118 6.71673C23.1821 9.42042 23.1385 14.5321 22.5259 17.278C22.2724 18.2257 21.5303 18.965 20.5826 19.2213C17.9071 19.8831 5.92356 19.8015 3.40294 19.2213C2.45524 18.9678 1.71595 18.2257 1.45966 17.278C0.827391 14.7011 0.871044 9.25144 1.44558 6.73081C1.69905 5.78311 2.44116 5.04382 3.38886 4.78753C6.96561 4.0412 19.2956 4.282 20.5686 4.77345ZM9.86682 8.70227L15.6122 11.9974L9.86682 15.2925V8.70227Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.tiktok.com/@partners_in_excellence" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-white box-border h-6 w-6 before:accent-auto before:text-white before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="box-border h-full w-full">
+                                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74a2.89 2.89 0 0 1 2.31-4.64a2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section class="sticky bg-zinc-100 border-l-slate-900 border-r-slate-900 border-t-slate-900 box-border block z-[4] border-b bottom-0 md:relative md:bg-white md:hidden md:z-auto md:bottom-auto">
+            <div class="box-border px-[5%]">
+                <div class="items-center box-border flex flex-col justify-start text-center py-2 md:flex-row md:text-start md:py-3">
+                    <div class="items-start box-border flex basis-[0%] grow min-h-[auto] min-w-[auto] text-center mb-4 mx-auto md:items-center md:min-h-0 md:min-w-0 md:text-start md:ml-0 md:mr-8 md:mb-0">
+                        <div class="box-border hidden shrink-0 text-center mr-4 md:block md:text-start">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border inline-block h-8 max-w-full text-center w-8 md:text-start">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center md:min-h-0 md:min-w-0 md:text-start"><div class="font-semibold box-border text-center md:text-start">Contact Us Now</div></div>
+                    </div>
+                    <div class="box-border flex justify-center min-h-[auto] min-w-[auto] text-center md:justify-normal md:min-h-0 md:min-w-0 md:text-start">
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 mr-4 md:min-h-0 md:min-w-0 md:text-start md:ml-4 md:mr-0">
+                            <a
+                                href="/pages/contact-us.html"
+                                class="text-white text-xs font-bold bg-sky-600 box-border inline-block leading-[18px] text-center border border-cyan-500 px-4 py-2 rounded-[10px] border-solid md:text-base md:leading-6 md:px-5"
+                            >
+                                Contact
+                            </a>
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 md:min-h-0 md:min-w-0 md:text-start md:ml-4">
+                            <a
+                                href="tel:+19527465350"
+                                class="text-black text-xs font-bold bg-white box-border inline-block leading-[18px] text-center border px-4 py-2 rounded-[10px] border-solid border-white md:text-base md:leading-6 md:px-5"
+                            >
+                                889-999-2867
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

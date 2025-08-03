@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AVA/AVB Therapy</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="/styles/avavb.css" />
+        <script>
+            tailwind.config = {
+                content: [],
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            open_sans: ["Open Sans", "sans-serif"],
+                            icons: ["Font Awesome 6 Free"],
+                        },
+                    },
+                },
+            };
+        </script>
+        
+        
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+       
+
+        
+    </head>
+    <body
+        class="text-slate-900 text-base not-italic normal-nums font-normal accent-auto bg-white box-border block tracking-[normal] leading-6 list-outside list-disc min-h-full text-start indent-[0px] normal-case visible border-separate font-open_sans"
+    >
+        <div class="sticky box-border z-[99999] top-[0%] inset-x-[0%]">
+            <section class="relative bg-white box-border">
+                <div class="box-border px-[5%]">
+                    <div class="items-center box-border flex flex-col justify-start pt-1 pb-0 md:flex-row md:pb-1">
+                        <div class="relative items-start box-border flex basis-[0%] flex-col grow justify-between mr-4 md:items-center md:flex-row md:mr-0">
+                            <div class="relative text-black text-base font-bold items-center box-border gap-x-2 flex flex-col leading-6 text-left z-[900] mr-auto left-[0%] top-[0%] md:text-[13.6px] md:leading-[20.4px]">
+                                <div role="button" class="relative text-neutral-800 text-base box-border leading-6 text-nowrap align-top mb-2 mx-auto pl-5 pr-10 py-2 left-0 top-0 md:text-[13.6px] md:leading-[20.4px] md:mb-0">
+                                    <div
+                                        class="absolute text-base font-normal box-border h-4 leading-4 text-nowrap w-4 ml-auto mr-5 my-auto right-0 inset-y-0 font-webflow_icons md:text-[13.6px] md:h-[13.6px] md:leading-[13.6px] md:w-[13.6px] before:accent-auto before:text-neutral-800 before:text-base before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:text-left before:indent-[0px] before:normal-case before:text-nowrap before:visible before:border-separate before:font-webflow_icons before:md:text-[13.6px] before:md:leading-[13.6px]"
+                                    ></div>
+                                    <div class="text-base box-border leading-6 text-nowrap md:text-[13.6px] md:leading-[20.4px]">Language</div>
+                                </div>
+                                <!--<nav class="absolute text-base bg-zinc-300 box-border hidden leading-6 min-w-full z-[4] left-[0%] top-[0%] md:text-[13.6px] md:leading-[20.4px]">
+                                    <div class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                        <div role="list" class="text-base box-border leading-6 overflow-hidden md:text-[13.6px] md:leading-[20.4px] md:overflow-visible">
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/aba-abv" class="text-sky-600 text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">English</a>
+                                            </div>
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/es-us/aba-abv" class="text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">Spanish (United States)</a>
+                                            </div>
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/so/aba-abv" class="text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">Somali</a>
+                                            </div>
+                                            <div role="listitem" class="text-base box-border leading-6 md:text-[13.6px] md:leading-[20.4px]">
+                                                <a href="/fr/aba-abv" class="text-base box-border block leading-6 underline px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:px-4 md:py-2">French (Standard)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>-->
+                            </div>
+                            <div class="items-center box-border gap-x-2 hidden justify-end min-h-0 min-w-0 gap-y-2 md:gap-x-0 md:flex md:min-h-[auto] md:min-w-[auto] md:gap-y-0">
+                                <div class="items-start box-border flex flex-col justify-start min-h-0 min-w-0 mb-2 md:[align-items:normal] md:block md:flex-row md:justify-normal md:min-h-[auto] md:min-w-[auto] md:mb-0">
+                                    <form class="items-center box-border flex mr-2">
+                                        <input
+                                            name="query"
+                                            placeholder="Search…"
+                                            type="search"
+                                            class="text-zinc-800 text-xs box-border block h-[38px] leading-[17.1428px] min-h-0 min-w-40 align-middle w-full border border-stone-300 px-3 py-2 border-solid md:min-h-[auto] md:min-w-[auto]"
+                                        />
+                                        <input type="submit" value="search" class="text-white text-xs bg-sky-600 box-border block leading-[18px] min-h-0 min-w-0 text-center text-nowrap px-[15px] py-[9px] md:min-h-[auto] md:min-w-[auto]" />
+                                    </form>
+                                </div>
+                                <div class="relative box-border inline-block min-h-0 min-w-0 text-left w-full z-[1] mx-auto md:block md:min-h-[auto] md:min-w-[auto] md:w-auto">
+                                    <div role="button" class="relative text-neutral-800 box-border inline-block text-nowrap align-top mx-auto"></div>
+                                </div>
+                                <div class="relative box-border inline-block min-h-0 min-w-0 text-left w-full z-[1] mx-auto md:block md:min-h-[auto] md:min-w-[auto] md:w-auto">
+                                    <div role="button" class="relative text-neutral-800 box-border inline-block text-nowrap align-top mx-auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-start box-border gap-x-3 grid auto-cols-max grid-flow-col grid-cols-[max-content] grid-rows-[auto] justify-items-start gap-y-0">
+                            <a href="https://www.facebook.com/DoctorThangsHerbaceuticals/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-blue-600 text-[15px] box-border h-6 leading-[22.5px] w-6 md:text-sm md:leading-[21px] before:table after:table after:clear-both"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-3.svg" alt="Icon" class="text-[15px] box-border h-full leading-[22.5px] w-full md:text-sm md:leading-[21px]" />
+                                    
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/partners_in_excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-fuchsia-700 box-border h-6 w-6 before:table after:table after:clear-both"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-4.svg" alt="Icon" class="box-border h-6 w-6" />
+                                </div>
+                            </a>
+                            <a href="#" class="text-black text-sm items-center box-border hidden leading-[21px] max-w-full">
+                                <div
+                                    class="text-sky-500 box-border h-6 w-6 before:accent-auto before:text-sky-500 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-500 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-5.svg" alt="Icon" class="box-border h-full w-full" />
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/partners-in-excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-sky-600 box-border h-6 w-6 before:accent-auto before:text-sky-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-6.svg" alt="Icon" class="box-border h-6 w-6" />
+                                </div>
+                            </a>
+                            <a href="http://www.youtube.com/@drthangs" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-red-600 box-border h-6 w-6 before:accent-auto before:text-red-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-red-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-7.svg" alt="Icon" class="box-border h-full w-full" />
+                                </div>
+                            </a>
+                            <a href="https://www.tiktok.com/@partners_in_excellence" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                <div
+                                    class="text-black box-border h-6 w-6 before:accent-auto before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-8.svg" alt="Icon" class="box-border h-full w-full" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div
+                role="banner"
+                class="sticky items-center bg-zinc-100 box-border flex min-h-16 w-full z-[80] px-[5%] md:min-h-[72px] before:accent-auto before:text-slate-900 before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-slate-900 after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+            >
+                <div class="items-center box-border flex h-full justify-between w-full mx-auto">
+                    <a href="/" aria-label="home" class="relative text-zinc-800 box-border block float-left">
+                        <img src="/assets/logo website.png" alt="" class="box-border inline-block max-w-full w-[167px] py-[5%]" />
+                    </a>
+                    <nav
+                        role="navigation"
+                        class="absolute items-center bg-zinc-100 border-l-slate-900 border-r-slate-900 border-t-slate-900 box-border hidden float-none h-[1000px] min-h-0 min-w-0 overflow-auto pt-4 pb-24 px-[5%] border-b-black border-b md:static md:bg-transparent md:border-b-slate-900 md:flex md:float-right md:h-auto md:min-h-[auto] md:min-w-[auto] md:overflow-visible md:p-0 md:border-b-0"
+                    >
+                        <a
+                            href="/pages/about.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            About
+                        </a>
+                        <a
+                            href="/pages/career.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Careers
+                        </a>
+                        <a
+                            href="/pages/enrollment.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Enrollment
+                        </a>
+                        <a
+                            href="/pages/events.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Events
+                        </a>
+                        <a
+                            href="/pages/locations.html"
+                            class="relative text-black text-base font-bold box-border block leading-6 min-h-0 min-w-0 text-left align-top mx-auto px-0 py-3 md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:px-4 md:py-2"
+                        >
+                            Locations
+                        </a>
+                        <div class="dropdown relative text-lg box-border inline-block leading-[27px] min-h-0 min-w-0 text-left w-full z-[900] mx-auto md:text-base md:block md:leading-6 md:min-h-[auto] md:min-w-[auto] md:w-auto">
+                            <div role="button" class="dropdown-toggle relative text-black text-base font-bold items-center box-border gap-x-2 flex leading-6 text-nowrap align-top mx-auto pl-0 pr-4 py-3 md:text-[13.6px] md:leading-[20.4px] md:pl-4 md:py-2">
+                                <div class="text-base box-border leading-6 min-h-0 min-w-0 text-nowrap md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto]">Services</div>
+                                <div
+                                    class="text-base items-center box-border flex flex-col h-4 justify-center leading-6 min-h-0 min-w-0 text-nowrap w-4 right-[0%] md:text-[13.6px] md:leading-[20.4px] md:min-h-[auto] md:min-w-[auto] md:right-auto before:accent-auto before:text-black before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:min-h-0 before:min-w-0 before:text-left before:indent-[0px] before:normal-case before:text-nowrap before:visible before:border-separate before:font-open_sans before:md:text-[13.6px] before:md:leading-[20.4px] before:md:min-h-[auto] before:md:min-w-[auto] after:accent-auto after:clear-both after:text-black after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:min-h-0 after:min-w-0 after:text-left after:indent-[0px] after:normal-case after:text-nowrap after:visible after:border-separate after:font-open_sans after:md:text-[13.6px] after:md:leading-[20.4px] after:md:min-h-[auto] after:md:min-w-[auto]"
+                                >
+                                    <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-9.svg" alt="Icon" class="text-base box-border h-full leading-6 text-nowrap w-full md:text-[13.6px] md:leading-[20.4px]" />
+                                </div>
+                            </div>
+                            <nav class="dropdown-menu static text-lg bg-zinc-300 box-border hidden h-0 leading-[27px] min-w-full opacity-100 overflow-hidden md:absolute md:text-base md:h-auto md:leading-6 md:opacity-0 md:overflow-visible">                                 
+                                <a href="/pages/dropdowns/all-services.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    All Services
+                                </a>
+                                <a href="/pages/dropdowns/avavb.html" class="relative text-red-600 text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    ABA/AVB Therapy
+                                </a>
+                                <a href="/pages/dropdowns/feed.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    Feeding Therapy
+                                </a>
+                                <a href="/pages/dropdowns/occup.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    Occupational Therapy
+                                </a>
+                                <a
+                                    href="/pages/dropdowns/speech.html"
+                                    class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2"
+                                >
+                                    Speech Therapy
+                                </a>
+                                <a href="/pages/dropdowns/bridges.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">Bridges</a>
+                                <a href="/pages/dropdowns/cs-mgmt.html" class="relative text-black text-base font-bold box-border block leading-6 text-nowrap align-top mx-auto pl-[2%] pr-0 py-3 md:text-[14.4px] md:leading-[21.6px] md:px-4 md:py-2">
+                                    Case Management
+                                </a>
+                            </nav>
+                        </div>
+                        <div
+                            class="items-stretch box-border gap-x-4 flex flex-col auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto_auto] min-h-0 min-w-0 gap-y-4 ml-0 mt-6 md:items-center md:flex-row md:grid-cols-[1fr_1fr] md:grid-rows-[auto] md:min-h-[auto] md:min-w-[auto] md:ml-4 md:mt-0"
+                        >
+                            <a href="#" class="text-black font-bold box-border block min-h-0 min-w-0 text-center border border-cyan-500 px-5 py-2 rounded-[10px] border-solid md:min-h-[auto] md:min-w-[auto]">952-746-5350</a>
+                            <a href="/pages/contact-us.html" class="text-white font-bold bg-sky-600 box-border block min-h-0 min-w-0 text-center border border-cyan-500 px-5 py-2 rounded-[10px] border-solid md:min-h-[auto] md:min-w-[auto]">
+                                Contact Us
+                            </a>
+                        </div>
+                    </nav>
+                    <div aria-label="menu" role="button" class="relative text-2xl box-border block float-right leading-9 min-h-[auto] min-w-[auto] md:hidden md:min-h-0 md:min-w-0">
+                        <div class="items-center box-border flex flex-col h-12 justify-center w-12 -mr-2 md:[align-items:normal] md:block md:flex-row md:h-auto md:justify-normal md:w-auto md:mr-0">
+                            <div class="bg-black box-border h-0.5 min-h-[auto] min-w-[auto] w-6 md:bg-transparent md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>
+                            <div
+                                class="items-center bg-black box-border flex h-0.5 justify-center min-h-[auto] min-w-[auto] w-6 my-1.5 md:[align-items:normal] md:bg-transparent md:block md:h-auto md:justify-normal md:min-h-0 md:min-w-0 md:w-auto md:my-0"
+                            >
+                                <div class="box-border h-0 min-h-[auto] min-w-[auto] w-1 md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>
+                            </div>
+                            <div class="bg-black box-border h-0.5 min-h-[auto] min-w-[auto] w-6 md:bg-transparent md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute box-border hidden w-full overflow-hidden top-full inset-x-0"></div>
+            </div>
+        </div>
+        <header class="relative text-white bg-cyan-500 box-border z-[5]">
+            <div class="box-border px-[10%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="items-center box-border flex justify-start max-h-[960px] min-h-[1000px]">
+                        <div class="text-black box-border py-16 md:py-28">
+                            <div class="box-border max-w-[560px] w-full">
+                                <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="text-white font-light box-border tracking-[1px] text-left capitalize">Partners In Excellence | ABA / AVB</h1></div>
+                                <div class="relative box-border z-[2] mb-5 md:mb-8"><h1 class="text-white text-[40px] font-bold box-border leading-[48px] text-left md:text-[56px] md:leading-[67.2px]">ABA / AVB</h1></div>
+                                <p class="text-white text-base font-light box-border leading-6 text-left md:text-lg md:leading-[27px]">
+                                    Partners In Excellence provides early intervention therapy for young children with Autism Spectrum Disorder and related conditions.
+                                    <br class="text-base box-border leading-6 md:text-lg md:leading-[27px]" />
+                                    <br class="text-base box-border leading-6 md:text-lg md:leading-[27px]" />
+                                    <em class="text-base italic box-border leading-6 md:text-lg md:leading-[27px]">ABA / AVB is provided at all Partners locations. </em>
+                                </p>
+                                <div class="box-border mt-6 md:mt-8">
+                                    <div class="items-center box-border gap-x-4 flex flex-wrap gap-y-4">
+                                        <div class="items-center box-border gap-x-4 flex flex-wrap gap-y-4">
+                                            <a href="/contact-us" class="text-white font-bold bg-sky-600 box-border block text-center border border-cyan-500 px-6 py-3 rounded-[10px] border-solid">Contact Us</a>
+                                            <a href="tel://+1957465350" class="font-bold bg-white box-border block text-center border px-6 py-3 rounded-[10px] border-solid border-white">952-746-5350</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))] box-border z-[-1] mx-[5%] my-[3%] rounded-[25px] inset-[0%]">
+                <div class="absolute bg-slate-900/60 box-border z-[1] rounded-[25px] inset-[0%]"></div>
+                <img src="/assets/add1.jpg" alt="" class="absolute box-border h-full max-w-full object-cover w-full rounded-[25px] inset-[0%]" />
+            </div>
+            <img src="/assets/side logo png.png" alt="" class="absolute bottom-[-16%] box-border max-w-full w-[444px] z-[-1] right-[0%] md:z-[1]" />
+        </header>
+        <header class="box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="items-center box-border gap-x-12 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-12 md:gap-x-20 md:grid-cols-[1fr_1fr] md:gap-y-16">
+                            <div class="box-border">
+                                <div class="box-border mb-3 md:mb-8"><h1 class="font-light box-border capitalize">Minnesota &amp; Wisconsin</h1></div>
+                                <div class="relative box-border z-[2] mb-5 md:mb-8"><h2 class="text-4xl font-semibold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">What is ABA/ABV?</h2></div>
+                                <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                    <p class="box-border">
+                                        <strong class="text-xl font-bold box-border leading-7 md:text-2xl md:leading-[33.6px]">
+                                            Our Approach to Therapy<br class="text-xl box-border leading-7 md:text-2xl md:leading-[33.6px]" />
+                                            ‍
+                                        </strong>
+                                        At Partners In Excellence, we provide individualized therapy designed to support each child’s unique learning journey. Therapy begins with building rapport and assessing a child’s skills to create
+                                        personalized goals. While we follow a structured approach, we recognize that every child learns differently and adjust therapy to fit their progress.A strong therapist-child connection is key to
+                                        success. We create a fun, engaging environment where learning is motivating and rewarding. By using reinforcement based on a child’s interests and sensory preferences, we ensure therapy is both
+                                        effective and enjoyable.<br class="box-border" />
+                                        <strong class="text-lg font-bold box-border leading-[25.2px] md:text-xl md:leading-7">
+                                            <br class="text-lg box-border leading-[25.2px] md:text-xl md:leading-7" />
+                                            Applied Behavior Analysis (ABA) &amp; Applied Verbal Behavior (AVB)<br class="text-lg box-border leading-[25.2px] md:text-xl md:leading-7" />
+                                            ‍
+                                        </strong>
+                                        At Partners, our therapy is rooted in <strong class="font-bold box-border">Applied Behavior Analysis (ABA),</strong> a research-based approach that helps children build new skills by understanding the
+                                        relationship between behavior and the environment. ABA uses evidence-based strategies, such as <strong class="font-bold box-border">positive reinforcement, prompting, and shaping</strong> , to
+                                        increase desired behaviors and decrease those that may interfere with learning and daily life. <br class="box-border" />
+                                        <br class="box-border" />
+                                        Within ABA, we incorporate <strong class="font-bold box-border">Applied Verbal Behavior (AVB),</strong> a specialized approach to language development. AVB focuses on the
+                                        <strong class="font-bold box-border">functionality of communication</strong> —teaching children not just words, but how to use them meaningfully in different situations. By breaking language down into
+                                        specific categories (such as requesting, labeling, and conversational exchanges), AVB helps children develop communication skills that support their independence and social interactions.
+                                        <br class="box-border" />
+                                        <br class="box-border" />
+                                        <strong class="text-xl font-bold box-border leading-7 md:text-2xl md:leading-[33.6px]">Why Choose Partners?</strong>
+                                        <br class="box-border" />
+                                    </p>
+                                </div>
+                                <div class="box-border gap-x-4 grid auto-cols-[1fr] grid-cols-[1.5fr] grid-rows-[auto] gap-y-4 py-2">
+                                    <div class="self-start box-border flex">
+                                        <div class="self-start box-border shrink-0 mr-4">
+                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da9482c9015a18e17d790_Group_1171275124.svg" alt="" class="box-border inline-block max-w-full" />
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="box-border"><strong class="font-bold box-border">Research-Based Methodology (ABA/VB): </strong> We use scientifically supported techniques to guide learning and behavior development.</p>
+                                        </div>
+                                    </div>
+                                    <div class="self-start box-border flex">
+                                        <div class="self-start box-border shrink-0 mr-4">
+                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da9482c9015a18e17d790_Group_1171275124.svg" alt="" class="box-border inline-block max-w-full" />
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="box-border">
+                                                <strong class="font-bold box-border">Individualized Assessment &amp; Goals:</strong> Each child receives a customized therapy plan based on their unique strengths and needs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="self-start box-border flex">
+                                        <div class="self-start box-border shrink-0 mr-4">
+                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da9482c9015a18e17d790_Group_1171275124.svg" alt="" class="box-border inline-block max-w-full" />
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="box-border"><strong class="font-bold box-border">Focus on Rapport &amp; Engagement:</strong> Building strong, trusting relationships is at the heart of what we do.</p>
+                                        </div>
+                                    </div>
+                                    <div class="self-start box-border flex">
+                                        <div class="self-start box-border shrink-0 mr-4">
+                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da9482c9015a18e17d790_Group_1171275124.svg" alt="" class="box-border inline-block max-w-full" />
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="box-border"><strong class="font-bold box-border">Reinforcement-Based Approach:</strong> We use each child&#39;s interests and preferences to motivate meaningful progress.</p>
+                                        </div>
+                                    </div>
+                                    <div class="self-start box-border flex">
+                                        <div class="self-start box-border shrink-0 mr-4">
+                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da9482c9015a18e17d790_Group_1171275124.svg" alt="" class="box-border inline-block max-w-full" />
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="box-border"><strong class="font-bold box-border">Adaptable Teaching Styles: </strong> Therapy is tailored to accommodate different learning styles and sensory needs.</p>
+                                        </div>
+                                    </div>
+                                    <div class="self-start box-border flex">
+                                        <div class="self-start box-border shrink-0 mr-4">
+                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da9482c9015a18e17d790_Group_1171275124.svg" alt="" class="box-border inline-block max-w-full" />
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="box-border"><strong class="font-bold box-border">Errorless Learning Techniques: </strong> We provide structured support to promote success and build confidence.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                    <p class="box-border">
+                                        <br class="box-border" />
+                                        At Partners, we believe that <strong class="font-bold box-border">every child deserves the opportunity to reach their full potential.</strong> By combining individualized therapy with the power of ABA
+                                        and AVB, we create meaningful learning experiences that foster growth, confidence, and independence.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="box-border">
+                                <img
+                                    src="/assets/add 2.jpg"
+                                    sizes="(max-width: 1350px) 100vw, 1350px"
+                                    alt=""
+                                    class="box-border inline-block h-full max-w-full w-full rounded-[25px]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/676da72d848816903d6d76cc_divider.svg" alt="" class="relative box-border h-full max-h-full max-w-full w-full" />
+        <section class="text-white bg-cyan-500 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="box-border">
+                            <div class="items-start box-border gap-x-5 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-5 md:gap-x-20 md:grid-cols-[1fr_1fr] md:gap-y-16">
+                                <div class="box-border">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                        <h2 class="text-white text-[32px] font-bold box-border leading-[38.4px] text-left md:text-[40px] md:leading-[48px]">Treatment Length and Prognosis</h2>
+                                    </div>
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                        <p class="text-white text-base box-border leading-6 text-left md:text-lg md:leading-[27px]">
+                                            Each child’s progress is unique to that child. Therefore, progress is monitored closely by a clinical team of therapists and formally reviewed on a monthly basis. Partners works closely with
+                                            parents regarding their child’s progress and is always available, per our open door policy, to answer any questions.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div
+                                        class="box-border before:accent-auto before:text-black before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-black after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                    >
+                                        <ul role="list" class="text-white box-border text-left overflow-hidden my-4 pl-5">
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Diagnosis</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Age at onset of treatment</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Other prior and concurrent treatment</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Treatment intensity</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Treatment consistency</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Developmental, physical or neurological disabilities</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Medical and organic disabilities and conditions</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Various environmental situations</li>
+                                            <li class="box-border leading-[22.4px] my-2 px-2">Family cohesiveness and participation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-zinc-100 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="box-border mb-12">
+                            <div class="box-border text-center">
+                                <div class="box-border max-w-screen-md w-full mx-auto">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h2 class="text-4xl font-semibold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">Components of a Daily Schedule</h2></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-border">
+                            <div class="items-start box-border gap-x-8 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] justify-items-start gap-y-12 md:gap-x-12 md:grid-cols-[1fr_1fr_1fr] md:gap-y-16">
+                                <div class="text-white items-center bg-cyan-500 box-border flex-col h-full w-full p-8 rounded-[15px]">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h5 class="text-xl font-bold box-border leading-7 md:text-2xl md:leading-[33.6px]">Intensive Table Teaching (ITT)</h5></div>
+                                    <p class="box-border">
+                                        Several sections of the ABLLS-R (tacts, receptive language, intraverbals, echoics, motor and vocal imitation, etc.) are most appropriately taught at a child-sized table. This type of learning is
+                                        called Intensive Table Teaching or ITT. During an ITT session, mastered and acquisition tasks, across several verbal operant categories, are targeted.<br class="box-border" />
+                                        <br class="box-border" />
+                                        There are a variety of effective teaching procedures that are performed when conducting an ITT session. When these techniques are balanced and consistently applied, the child is a willing participant
+                                        in the learning process and may exhibit few, if any, challenging behaviors.
+                                    </p>
+                                </div>
+                                <div class="text-white items-center bg-lime-500 box-border flex-col h-full w-full p-8 rounded-[15px]">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h5 class="text-xl font-bold box-border leading-7 md:text-2xl md:leading-[33.6px]">Natural Environment Teaching (NET)</h5></div>
+                                    <p class="box-border">
+                                        Natural Environment Teaching (NET) builds upon skills learned in Intensive Teaching Trials (ITT) by teaching new skills and appropriate play within a child&#39;s natural environment and preferred
+                                        activities.  Unlike the structured ITT, NET is informal and focuses on the child&#39;s current interests, providing reinforcements directly related to the activity.  This approach helps generalize
+                                        learned skills and encourages appropriate toy manipulation, addressing common issues like stereotyped play.<br class="box-border" />
+                                        <br class="box-border" />
+                                        NET provides a valuable setting for teaching a wide range of verbal skills, rather than focusing on just one at a time. Therapists using NET work to create or leverage the child&#39;s motivation for
+                                        activities that align with goals from programs like the ABLLS-R. This integrated approach helps children with autism learn language in a variety of natural and engaging contexts.
+                                    </p>
+                                </div>
+                                <div class="text-white items-center bg-red-600 box-border flex-col h-full w-full p-8 rounded-[15px]">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8"><h5 class="text-xl font-bold box-border leading-7 md:text-2xl md:leading-[33.6px]">Small Group</h5></div>
+                                    <p class="box-border">
+                                        Being part of a center-based program allows opportunities for small group therapy sessions. In a small group, therapy focuses on peer interaction and the ability to attend to one primary instructor.
+                                        Small group gives children an opportunity to practice their social interaction skills in a new environment. <br class="box-border" />
+                                        <br class="box-border" />
+                                        The goal of small group is to have the children actively participate in the activities with their peers and to learn how to follow the rules and routines of the group. During small group sessions, the
+                                        therapists start to fade their level of support to allow the children to learn from each other. Therapists are available to redirect each child’s behavior if a child struggles within the group. Small
+                                        group therapy offers an opportunity to improve a child’s social interaction skills, and to enable the child to develop peer friendships.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-white bg-cyan-500 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="items-center box-border gap-x-12 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-12 md:gap-x-20 md:grid-cols-[1fr_1fr] md:gap-y-1">
+                            <div class="box-border">
+                                <img
+                                    src="/assets/add story 2.jpg"
+                                    sizes="(max-width: 1350px) 100vw, 1350px"
+                                    alt=""
+                                    class="box-border inline-block h-full max-w-full w-full rounded-[25px]"
+                                />
+                            </div>
+                            <div class="box-border -order-last md:order-none">
+                                <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                    <h3 class="text-white text-[32px] font-bold box-border leading-[38.4px] text-left md:text-[40px] md:leading-[48px]">Objectives For Teaching In A Small Group:</h3>
+                                </div>
+                                <div
+                                    class="box-border before:accent-auto before:text-black before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-black after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                >
+                                    <ul role="list" class="text-white box-border text-left overflow-hidden my-4 pl-5">
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Increasing peer interaction</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Turn taking and waiting appropriately</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Increased discriminative listening and responding skills</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Following novel 1- and 2- step directions</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Naturalistic learning from imitation or observation of peers</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Peer promoting</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Connectedness with others</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Improved self-esteem</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Group cooperation</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Classroom routines</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Requesting information using &quot;Wh&quot; questions</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Independently completing tasks with multiple steps (ex. art projects)</li>
+                                        <li class="box-border leading-[22.4px] my-2 px-2">Generalizing ABLLS-R skills previously taught in ITT or NET</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-fixed bg-white bg-[url('https://cdn.prod.website-files.com/66c385b3874dcd29eadf8775/67813971d45d6d7967aefb45_grey%20backgroun.svg')] bg-cover box-border bg-[position:0px_0px]">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="box-border">
+                            <div class="items-start box-border gap-x-5 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-5 md:gap-x-20 md:grid-cols-[1fr_1fr] md:gap-y-16">
+                                <div class="box-border">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                        <h2 class="text-[32px] font-bold box-border leading-[38.4px] md:text-[40px] md:leading-[48px]">
+                                            <strong class="text-[32px] box-border leading-[38.4px] md:text-[40px] md:leading-[48px]">ABLLS-R Curriculum</strong>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border">
+                                        <div class="items-start box-border gap-x-4 grid auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-stretch gap-y-4">
+                                            <div class="items-stretch bg-white box-border flex-col justify-start border-red-600 overflow-hidden rounded-[10px] border-2 border-solid">
+                                                <div class="items-center box-border gap-x-6 flex justify-between gap-y-6 px-5 py-4 md:px-6 md:py-5">
+                                                    <div class="text-red-600 text-base font-bold box-border leading-6 md:text-lg md:leading-[27px]">Assessment of Basic Language &amp; Learning Skills</div>
+                                                    <div class="self-start box-border flex w-7 md:w-8">
+                                                        <div
+                                                            class="text-red-600 items-center box-border flex flex-col h-8 justify-center w-8 before:accent-auto before:text-red-600 before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-red-600 after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                        >
+                                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-10.svg" alt="Icon" class="box-border h-full w-full" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-border h-0 w-full overflow-hidden px-5 md:px-6">
+                                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                                        <div class="box-border max-w-screen-md w-full">
+                                                            <p class="box-border">
+                                                                Partners In Excellence employs The Assessment of Basic Language and Learning Skills- Revised (ABLLS-R) as its primary programming tool. James W. Partington, Ph.D. developed the
+                                                                revised version of this tool in 2006. The ABLLS-R is an assessment tool, curriculum guide, and a skills tracking system for children with language delays. The ABLLS-R contains
+                                                                a task analysis of many skills necessary to communicate successfully.<br class="box-border" />
+                                                                <br class="box-border" />
+                                                                The ABLLS-R protocol provides both parents and professionals with criterion-referenced information regarding a child’s current skill level that can serve as a basis for the
+                                                                selection of educational objectives. The ABLLS-R protocol includes a set of grids (graph) that comprise a skills tracking system for documentation of a child’s progress in the
+                                                                acquisition of critical skills.<br class="box-border" />
+                                                                <br class="box-border" />
+                                                                The ABLLS-R guide serves two purposes. First, it provides instructions for scoring and completing the skills tracking grids for an individual client. Second, it provides
+                                                                strategies to assist parents, educators and other professionals to use the information for a child.<br class="box-border" />
+                                                                <br class="box-border" />
+                                                                Although the ABLLS-R protocol provides an extensive list of skills, it does not include a method to determine the priorities for an individual child and does not include
+                                                                specific steps necessary to teach those skills. The ABLLS-R guide provides strategies for analyzing the ABLLS-R scores to determine educational priorities, and to help with the
+                                                                selection of educational objectives for an individual child.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="items-stretch bg-white box-border flex-col justify-start border-cyan-500 overflow-hidden rounded-[10px] border-2 border-solid">
+                                                <div class="items-center box-border gap-x-6 flex justify-between gap-y-6 px-5 py-4 md:px-6 md:py-5">
+                                                    <div class="text-cyan-500 text-base font-bold box-border leading-6 md:text-lg md:leading-[27px]">Purpose of Using the ABLLS-R at Partners</div>
+                                                    <div class="self-start box-border flex w-7 md:w-8">
+                                                        <div
+                                                            class="text-cyan-500 items-center box-border flex flex-col h-8 justify-center w-8 before:accent-auto before:text-cyan-500 before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-cyan-500 after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                        >
+                                                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-11.svg" alt="Icon" class="box-border h-full w-full" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-border h-0 w-full overflow-hidden px-5 md:px-6">
+                                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                                        <div class="box-border max-w-screen-md w-full">
+                                                            <p class="box-border">
+                                                                Partners uses the ABLLS-R as a tool to help identify language and other critical skills that are in need of intervention so that a child may become more capable of learning
+                                                                from everyday experiences (basic learner skills and other skills). It also provides a curriculum guide for a child with language delays. It provides a method for visually
+                                                                displaying the acquisition of new skills on the tracking system. This visual display helps Partners when communicating about client’s programming and progress with parents,
+                                                                schools, doctors, insurance companies, and other providers. It also facilitates reviews and updates of a child’s progress. This updating process provides a great source of
+                                                                reinforcement for parents and therapists as they see that critical skills are being acquired.<br class="box-border" />
+                                                                <br class="box-border" />
+                                                                The ABLLS-R graph provides a resource for communicating about each client’s progress, for the client’s therapy team, parents and other professionals.<br class="box-border" />
+                                                                <br class="box-border" />
+                                                                The ABLLS-R consists of 544 programs that break down every skill into its smallest basic components. There are 25 skill areas within each section, it begins with the simplest
+                                                                task and ends with the most complex. Partners use innovative teaching techniques targeting multiple developmental areas in a single integrated setting.<br class="box-border" />
+                                                                <br class="box-border" />
+                                                                Partners has an extensive library system of curriculum kits matching up with the ABLLS-R programs that are fun, visually pleasing, pre-packaged and ready to use when a new
+                                                                program is introduced. This library system allows the children to progress from one program to another without delay.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-cyan-500 box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="box-border">
+                            <div class="items-start box-border gap-x-12 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-12 md:gap-x-20 md:grid-cols-[0.75fr_1fr] md:gap-y-16">
+                                <div class="box-border">
+                                    <div class="items-start box-border gap-x-4 grid auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-stretch gap-y-4">
+                                        <div class="items-stretch bg-white box-border flex-col justify-start border-lime-400 overflow-hidden rounded-[10px] border-2 border-solid">
+                                            <div class="items-center box-border gap-x-6 flex justify-between gap-y-6 px-5 py-4 md:px-6 md:py-5">
+                                                <div class="text-lime-400 text-base font-bold box-border leading-6 md:text-lg md:leading-[27px]">Early Learner</div>
+                                                <div class="self-start box-border flex w-7 md:w-8">
+                                                    <div
+                                                        class="text-lime-400 items-center box-border flex flex-col h-8 justify-center w-8 before:accent-auto before:text-lime-400 before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-lime-400 after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-12.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-border h-0 w-full overflow-hidden px-5 md:px-6">
+                                                <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                                    <div class="box-border max-w-screen-md w-full">
+                                                        <p class="box-border">
+                                                            The Early Learner Program is designed to address the treatment needs of children with Autism Spectrum Disorders and other related conditions who are between the ages of 1 to 4
+                                                            years. Clients of the early learner age develop best using Natural Environment Teaching (NET), which means that the therapy programming for these children is structured to resemble
+                                                            the natural life environment of a child’s day. Partners In Excellence uses the Hawaii Early Learning Profile (HELP) as a guide in the identification of treatment goals and to
+                                                            measure client progress. The objectives outlined in the HELP are used for the assessment and treatment programming for each child’s individual treatment needs. The HELP is designed
+                                                            around typical developmental milestones, and treatment objectives focus on a variety of skill areas, which include age-appropriate socialization, play, communication, and daily
+                                                            living skills.<br class="box-border" />
+                                                            <br class="box-border" />
+                                                            The Early Learner Program recognizes that most learning in early childhood occurs within the social context of daily activities and experiences. Therefore, the program is
+                                                            structured to include teaching through everyday routines, a variety of social activities, and planned group activities. Clients in this program will be actively engaged with
+                                                            therapists throughout the therapy day.  Each child’s treatment program focuses on developing skills that have been identified as deficits or areas in need of growth. Treatment
+                                                            plans are designed to meet the individual needs of each child.   Therapists continually create opportunities throughout the child’s therapy day to practice and teach those skills
+                                                            identified as treatment objectives.<br class="box-border" />
+                                                            <br class="box-border" />
+                                                            In addition to the therapy programming for children in the Early Learner Program, monthly parent training classes are offered to address the specific treatment needs of this age
+                                                            group and to better equip parents with the skills needed to forward their child’s development and progress. Parents are encouraged to participate in these trainings, and will
+                                                            receive guidance from their child’s treatment team to specifically address each child’s individual needs.  Parents are also encouraged to participate in individual in center, hands
+                                                            on training during their child’s therapy day.  Parents can work one-on-one with the child’s therapist to learn specific teaching techniques and behavior management strategies to
+                                                            help facilitate the generalization of skills into the home environment.<br class="box-border" />
+                                                            <br class="box-border" />
+                                                            <strong class="font-bold box-border">Clients in this program may attend a morning, an afternoon or all day program.<br class="box-border" /> </strong>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="items-stretch bg-white box-border flex-col justify-start border-sky-600 overflow-hidden rounded-[10px] border-2 border-solid">
+                                            <div class="items-center box-border gap-x-6 flex justify-between gap-y-6 px-5 py-4 md:px-6 md:py-5">
+                                                <div class="text-sky-600 text-base font-bold box-border leading-6 md:text-lg md:leading-[27px]">Intermediate Learner</div>
+                                                <div class="self-start box-border flex w-7 md:w-8">
+                                                    <div
+                                                        class="text-sky-600 items-center box-border flex flex-col h-8 justify-center w-8 before:accent-auto before:text-sky-600 before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-600 after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-13.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-border h-0 w-full overflow-hidden px-5 md:px-6">
+                                                <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                                    <div class="box-border max-w-screen-md w-full">
+                                                        <p class="box-border">
+                                                            The Intermediate Learner program is designed to increase the children’s opportunities to practice social skills and introduce them to peer directed learning.  Prior to
+                                                            participating in the Intermediate Learner program, the children are intensively taught how to be successful in a therapist-directed learning environment.  Once the children have
+                                                            developed adequate cooperation and language skills and readily acquire new skills, they are ready to learn in a structured group environment.  Children will continue to work on
+                                                            developing language, social, and school readiness skills through intensive teaching.  They will also develop these skills in small group settings.  Providing opportunities for the
+                                                            children to work in groups teaches them to place value on belonging to a group.  The motivation for the children to complete the task becomes that all members of the group complete
+                                                            the task. <br class="box-border" />
+                                                            <br class="box-border" />
+                                                            The Intermediate Learner program follows a daily schedule that is structured to include everyday routines, such as brushing teeth, dressing, and arrival and departure routines.  It
+                                                            also includes a variety of social activities and strategies, such as peer play, video modeling, and interactive and facilitated play.  The children participate in controlled group
+                                                            activities, including fine motor and Stepping Stones.  This schedule allows the clients opportunities to initiate and sustain social interactions with therapist support and
+                                                            guidance as needed.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                        <h2 class="text-white text-4xl font-bold box-border leading-[43.2px] text-left md:text-5xl md:leading-[57.6px]">
+                                            <strong class="text-4xl box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">Specialized Programs</strong>
+                                        </h2>
+                                    </div>
+                                    <div
+                                        class="text-white box-border text-left before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-left after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white box-border">
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="text-black box-border py-16 md:py-28">
+                        <div class="items-center box-border flex-col">
+                            <div class="box-border mb-12">
+                                <div class="box-border text-center">
+                                    <div class="box-border max-w-screen-md w-full mx-auto">
+                                        <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                            <h2 class="text-4xl font-semibold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">
+                                                Helping <strong class="text-4xl font-bold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">Children</strong> and
+                                                <strong class="text-4xl font-bold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">Families</strong>
+                                                <strong class="text-4xl font-bold box-border leading-[43.2px] md:text-5xl md:leading-[57.6px]">Succeed</strong>
+                                                Together
+                                            </h2>
+                                        </div>
+                                        <p class="text-base box-border leading-6 md:text-lg md:leading-[27px]">
+                                            At Partners Autism Therapy Centers, we help children facing challenges build confidence at home and in everyday life. With a wide range of services, diverse therapies, and a dedicated team, we
+                                            provide personalized care and expert support to ensure your child thrives, from diagnosis to progress.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-border">
+                                <div class="box-border gap-x-12 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-12 md:grid-cols-[1fr_1fr_1fr]">
+                                    <div class="text-white bg-cyan-500 box-border border border-lime-400 overflow-hidden rounded-[25px] border-solid">
+                                        <a href="/avavb.html" class="text-black box-border flex flex-col h-full justify-start max-w-full">
+                                            <div class="box-border w-full overflow-hidden">
+                                                <img
+                                                    src="/assets/add1.jpg"
+                                                    alt=""
+                                                    class="aspect-[3_/_2] box-border inline-block h-full max-w-full object-cover w-full"
+                                                />
+                                            </div>
+                                            <div class="items-center box-border flex basis-[0%] flex-col grow justify-around px-5 py-6 md:px-8">
+                                                <div class="box-border">
+                                                    <div class="box-border mb-8">
+                                                        <h4 class="text-white text-2xl font-bold box-border leading-[33.6px] text-left md:text-[32px] md:leading-[41.6px]">
+                                                            <strong class="text-2xl box-border leading-[33.6px] md:text-[32px] md:leading-[41.6px]">ABA / AVB</strong>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="text-white font-bold items-center bg-transparent box-border gap-x-3 flex justify-center gap-y-3 text-center border px-6 py-3 rounded-[10px] border-solid border-white">
+                                                    <div class="box-border">Learn More</div>
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-6 justify-center w-6 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-14.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-lime-400 box-border border border-lime-400 overflow-hidden rounded-[25px] border-solid">
+                                        <a href="/occup.html" class="box-border flex flex-col h-full justify-start max-w-full">
+                                            <div class="box-border w-full overflow-hidden">
+                                                <img
+                                                    sizes="100vw"
+                                                    alt=""
+                                                    src="/assets/add 2.jpg"
+                                                    class="aspect-[3_/_2] box-border inline-block h-full max-w-full object-cover w-full"
+                                                />
+                                            </div>
+                                            <div class="items-center box-border flex basis-[0%] flex-col grow justify-around px-5 py-6 md:px-8">
+                                                <div class="box-border">
+                                                    <div class="box-border mb-8">
+                                                        <h4 class="text-white text-2xl font-bold box-border leading-[33.6px] text-center mx-auto md:text-[32px] md:leading-[41.6px]">
+                                                            <strong class="text-2xl box-border leading-[33.6px] md:text-[32px] md:leading-[41.6px]">Occupational Therapy</strong>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="text-white font-bold items-center bg-transparent box-border gap-x-3 flex justify-center gap-y-3 text-center border px-6 py-3 rounded-[10px] border-solid border-white">
+                                                    <div class="box-border">Learn More</div>
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-6 justify-center w-6 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-14.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="text-white bg-green-700 box-border border border-lime-400 overflow-hidden rounded-[25px] border-solid">
+                                        <a href="/speech.html" class="text-black box-border flex flex-col h-full justify-start max-w-full">
+                                            <div class="box-border w-full overflow-hidden">
+                                                <img
+                                                    sizes="(max-width: 819px) 100vw, 819px"
+                                                    alt=""
+                                                    src="/assets/add 3.jpg"
+                                                    class="aspect-[3_/_2] box-border inline-block h-full max-w-full object-cover w-full"
+                                                />
+                                            </div>
+                                            <div class="items-center box-border flex basis-[0%] flex-col grow justify-around px-5 py-6 md:px-8">
+                                                <div class="box-border">
+                                                    <div class="box-border mb-8">
+                                                        <h4 class="text-white text-2xl font-bold box-border leading-[33.6px] text-center mx-auto md:text-[32px] md:leading-[41.6px]">Speech &amp; Language Pathology</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="text-white font-bold items-center bg-transparent box-border gap-x-3 flex justify-center gap-y-3 text-center border px-6 py-3 rounded-[10px] border-solid border-white">
+                                                    <div class="box-border">Learn More</div>
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-6 justify-center w-6 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-14.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-red-600 box-border border border-lime-400 overflow-hidden rounded-[25px] border-solid">
+                                        <a href="/feed.html" class="box-border flex flex-col h-full justify-start max-w-full">
+                                            <div class="box-border w-full overflow-hidden">
+                                                <img
+                                                    sizes="(max-width: 819px) 100vw, 819px"
+                                                    alt=""
+                                                    src="/assets/ADD 4.jpg"
+                                                    class="aspect-[3_/_2] box-border inline-block h-full max-w-full object-cover w-full"
+                                                />
+                                            </div>
+                                            <div class="items-center box-border flex basis-[0%] flex-col grow justify-around px-5 py-6 md:px-8">
+                                                <div class="box-border">
+                                                    <div class="box-border mb-8"><h4 class="text-white text-2xl font-bold box-border leading-[33.6px] text-left md:text-[32px] md:leading-[41.6px]">Feeding Therapy</h4></div>
+                                                </div>
+                                                <div class="text-white font-bold items-center bg-transparent box-border gap-x-3 flex justify-center gap-y-3 text-center border px-6 py-3 rounded-[10px] border-solid border-white">
+                                                    <div class="box-border">Learn More</div>
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-6 justify-center w-6 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-14.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-yellow-500 box-border border border-lime-400 overflow-hidden rounded-[25px] border-solid">
+                                        <a href="/bridges.html" class="box-border flex flex-col h-full justify-start max-w-full">
+                                            <div class="box-border w-full overflow-hidden">
+                                                <img
+                                                    sizes="(max-width: 1200px) 100vw, 1200px"
+                                                    alt=""
+                                                    src="/assets/add 5.jpg"
+                                                    class="aspect-[3_/_2] box-border inline-block h-full max-w-full object-cover w-full"
+                                                />
+                                            </div>
+                                            <div class="items-center box-border flex basis-[0%] flex-col grow justify-around px-5 py-6 md:px-8">
+                                                <div class="box-border">
+                                                    <div class="box-border mb-8"><h4 class="text-white text-2xl font-bold box-border leading-[33.6px] text-left md:text-[32px] md:leading-[41.6px]">Bridges Program</h4></div>
+                                                </div>
+                                                <div class="text-white font-bold items-center bg-transparent box-border gap-x-3 flex justify-center gap-y-3 text-center border px-6 py-3 rounded-[10px] border-solid border-white">
+                                                    <div class="box-border">Learn More</div>
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-6 justify-center w-6 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-14.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-sky-600 box-border border border-lime-400 overflow-hidden rounded-[25px] border-solid">
+                                        <a href="https://www.partnersmn.com/case-management" class="box-border flex flex-col h-full justify-start max-w-full">
+                                            <div class="box-border w-full overflow-hidden">
+                                                <img
+                                                    src="/assets/add 3.jpg"
+                                                    alt=""
+                                                    class="aspect-[3_/_2] box-border inline-block h-full max-w-full object-cover w-full"
+                                                />
+                                            </div>
+                                            <div class="items-center box-border flex basis-[0%] flex-col grow justify-around px-5 py-6 md:px-8">
+                                                <div class="box-border">
+                                                    <div class="box-border mb-8"><h4 class="text-white text-2xl font-bold box-border leading-[33.6px] text-left md:text-[32px] md:leading-[41.6px]">Case Management</h4></div>
+                                                </div>
+                                                <div class="text-white font-bold items-center bg-transparent box-border gap-x-3 flex justify-center gap-y-3 text-center border px-6 py-3 rounded-[10px] border-solid border-white">
+                                                    <div class="box-border">Learn More</div>
+                                                    <div
+                                                        class="items-center box-border flex flex-col h-6 justify-center w-6 before:accent-auto before:text-white before:table before:text-base before:not-italic before:normal-nums before:font-bold before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-base after:not-italic after:normal-nums after:font-bold after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                                    >
+                                                        <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/icon-14.svg" alt="Icon" class="box-border h-full w-full" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sticky bg-zinc-100 border-l-slate-900 border-r-slate-900 border-t-slate-900 box-border block z-[4] border-b bottom-0 md:relative md:bg-white md:hidden md:z-auto md:bottom-auto">
+            <div class="box-border px-[5%]">
+                <div class="items-center box-border flex flex-col justify-start text-center py-2 md:flex-row md:text-start md:py-3">
+                    <div class="items-start box-border flex basis-[0%] grow min-h-[auto] min-w-[auto] text-center mb-4 mx-auto md:items-center md:min-h-0 md:min-w-0 md:text-start md:ml-0 md:mr-8 md:mb-0">
+                        <div class="box-border hidden shrink-0 text-center mr-4 md:block md:text-start">
+                            <img src="https://c.animaapp.com/mdg77xd3UwNfFQ/assets/61f754bf565c727dd335ab33_icon.svg" alt="" class="box-border inline-block h-8 max-w-full text-center w-8 md:text-start" />
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center md:min-h-0 md:min-w-0 md:text-start"><div class="font-semibold box-border text-center md:text-start">Contact Us Now</div></div>
+                    </div>
+                    <div class="box-border flex justify-center min-h-[auto] min-w-[auto] text-center md:justify-normal md:min-h-0 md:min-w-0 md:text-start">
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 mr-4 md:min-h-0 md:min-w-0 md:text-start md:ml-4 md:mr-0">
+                            <a
+                                href="/pages/contact-us.html"
+                                class="text-white text-xs font-bold bg-sky-600 box-border inline-block leading-[18px] text-center border border-cyan-500 px-4 py-2 rounded-[10px] border-solid md:text-base md:leading-6 md:px-5"
+                            >
+                                Contact
+                            </a>
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 md:min-h-0 md:min-w-0 md:text-start md:ml-4">
+                            <a
+                                href="tel://+19527465350"
+                                class="text-black text-xs font-bold bg-white box-border inline-block leading-[18px] text-center border px-4 py-2 rounded-[10px] border-solid border-white md:text-base md:leading-6 md:px-5"
+                            >
+                                952-746-5350
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-white bg-slate-900 box-border">
+            <svg viewBox="0 0 1440 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative box-border inline-block max-w-full align-top w-full">
+                <rect width="142.466" height="7.30594" fill="#10B2D7"/>
+                <rect x="1297.54" width="142.466" height="7.30594" fill="#FFF200"/>
+                <rect x="142.465" width="385.023" height="7.30594" fill="#A3CD39"/>
+                <rect x="527.488" width="385.023" height="7.30594" fill="#2F853F"/>
+                <rect x="912.512" width="385.023" height="7.30594" fill="#ED1C24"/>
+            </svg>
+            <div class="box-border px-[5%]">
+                <div class="box-border max-w-screen-xl w-full mx-auto">
+                    <div class="box-border pt-32 pb-8">
+                        <div class="box-border pb-12 md:pb-20">
+                            <div class="items-start box-border gap-x-8 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-10 md:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] md:gap-y-4">
+                                <a
+                                    href="#"
+                                    class="relative text-zinc-800 box-border block float-left col-end-[span_1] col-start-[span_1] row-end-[span_1] row-start-[span_1] md:col-end-auto md:col-start-auto md:row-end-auto md:row-start-auto"
+                                >
+                                    <img alt="" src="/assets/logo website.png" class="box-border inline-block h-full max-w-full min-w-[50%] w-full pt-[10%]" />
+                                </a>
+                                <div class="box-border">
+                                    <div class="box-border mb-3 md:mb-8"><div class="text-cyan-500 font-semibold box-border">Hours</div></div>
+                                    <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                        <div class="relative box-border z-[2] mb-5 md:mb-8">
+                                            <p class="text-[14.4px] font-light box-border leading-[21.6px] text-left">
+                                                <strong class="font-bold box-border">Open: <br class="box-border" /> </strong> Mon. - Fri. <br class="box-border" />
+                                                8 AM - 5 PM
+                                            </p>
+                                        </div>
+                                        <div class="box-border">
+                                            <p class="text-[14.4px] font-light box-border leading-[21.6px] text-left"><strong class="font-bold box-border">Closed the Following: </strong> ‍</p>
+                                            <p class="box-border pt-4">
+                                                January 1<br class="box-border" />
+                                                May 26<br class="box-border" />
+                                                July 4<br class="box-border" />
+                                                September 1<br class="box-border" />
+                                                November 27<br class="box-border" />
+                                                November 28<br class="box-border" />
+                                                December 24<br class="box-border" />
+                                                December 25<br class="box-border" />
+                                                December 26
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border">
+                                        <div class="box-border mb-3 md:mb-8"><div class="text-green-700 font-semibold box-border">More</div></div>
+                                        <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                            <a href="/pages/about.html" class="text-sm box-border block leading-[21px] py-2">About Us</a>
+                                            <a href="/pages/career.html" class="text-sm box-border block leading-[21px] py-2">Careers</a>
+                                            <a href="/pages/enrollment.html" class="text-sm box-border block leading-[21px] py-2">Enrollment</a>
+                                            <a href="/pages/events.html" class="text-sm box-border block leading-[21px] py-2">Events</a>
+                                            <a href="#" class="text-sm box-border block leading-[21px] py-2">FAQs</a>
+                                            <a href="#" class="text-sm box-border block leading-[21px] py-2">Resources</a>
+                                            <a href="#" class="text-sm box-border block leading-[21px] py-2">Store</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border mb-3 md:mb-8"><div class="text-lime-400 font-semibold box-border">Services</div></div>
+                                    <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                        <a href="/pages/dropdowns/avavb.html" class="text-sm box-border block leading-[21px] py-2">ABA/AVB</a>
+                                        <a href="/pages/dropdowns/bridges.html" class="text-sm box-border block leading-[21px] py-2">Bridges</a>
+                                        <a href="/pages/dropdowns/feed.html" class="text-sm box-border block leading-[21px] py-2">Feeding Therapy</a>
+                                        <a href="/pages/dropdowns/speech.html" class="text-sm box-border block leading-[21px] py-2">Speech &amp; Language Pathology</a>
+                                        <a href="/pages/dropdowns/occup.html" class="text-sm box-border block leading-[21px] py-2">Occupational Therapy</a>
+                                        <a href="/pages/dropdowns/cs-mgmt.html" class="text-sm box-border block leading-[21px] py-2">Case Management</a>
+                                    </div>
+                                </div>
+                                <div class="box-border">
+                                    <div class="box-border mb-3 md:mb-8"><div class="text-red-600 font-semibold box-border">Locations</div></div>
+                                    <div class="items-start box-border flex flex-col auto-cols-[100%] grid-cols-[100%] grid-rows-[auto] justify-items-start">
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Arden Hills</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Burnsville</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Minnetonka</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">LaCrosse</a>
+                                        <a href="#" class="text-sm box-border block leading-[21px] py-2">Winona</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-yellow-400 box-border h-px w-full"></div>
+                        <div class="box-border pt-6 md:pt-8">
+                            <div class="items-start box-border flex flex-col-reverse justify-start pb-4 md:items-center md:flex-row md:justify-between md:pb-0">
+                                <div class="box-border gap-x-0 flex flex-col auto-cols-max grid-flow-row grid-cols-[max-content] grid-rows-[auto] justify-center gap-y-4 md:gap-x-6 md:flex-row md:grid-flow-col md:gap-y-0">
+                                    <div class="text-sm box-border col-end-2 col-start-1 row-end-5 row-start-4 leading-[21px] order-1 mt-4 md:col-end-auto md:col-start-auto md:row-end-auto md:row-start-auto md:order-none md:mt-0">
+                                        © 2025 Partners. All rights reserved.
+                                    </div>
+                                    <a href="#" class="text-sm font-light box-border block leading-[21px]">Website by Kamran Hassan</a>
+                                    <a href="#" class="text-sm font-light box-border block leading-[21px]">Privacy Policy</a>
+                                    <a href="#" class="text-sm font-light box-border block leading-[21px]">Terms of Use</a>
+                                </div>
+                                <div class="items-start box-border gap-x-3 flex auto-cols-max grid-flow-col grid-cols-[max-content] grid-rows-[auto] justify-items-start gap-y-0 mb-8 md:mb-0">
+                                    <div class="items-start box-border gap-x-3 grid auto-cols-max grid-flow-col grid-cols-[max-content] grid-rows-[auto] justify-items-start gap-y-0">
+                                        <a href="https://www.facebook.com/partnersmn" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-blue-600 text-[15px] box-border h-6 leading-[22.5px] w-6 md:text-sm md:leading-[21px] before:accent-auto before:text-blue-600 before:table before:text-[15px] before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[22.5px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans before:md:text-sm before:md:leading-[21px] after:accent-auto after:clear-both after:text-blue-600 after:table after:text-[15px] after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[22.5px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans after:md:text-sm after:md:leading-[21px]"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[15px] box-border h-full leading-[22.5px] w-full md:text-sm md:leading-[21px]">
+                                                    <path d="M22 12.0611C22 6.50451 17.5229 2 12 2C6.47715 2 2 6.50451 2 12.0611C2 17.0828 5.65684 21.2452 10.4375 22V14.9694H7.89844V12.0611H10.4375V9.84452C10.4375 7.32296 11.9305 5.93012 14.2146 5.93012C15.3088 5.93012 16.4531 6.12663 16.4531 6.12663V8.60261H15.1922C13.95 8.60261 13.5625 9.37822 13.5625 10.1739V12.0611H16.3359L15.8926 14.9694H13.5625V22C18.3432 21.2452 22 17.083 22 12.0611Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.instagram.com/partners_in_excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-fuchsia-700 box-border h-6 w-6 before:accent-auto before:text-fuchsia-700 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-fuchsia-700 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-6 w-6">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="text-black text-sm items-center box-border hidden leading-[21px] max-w-full">
+                                            <div
+                                                class="text-sky-500 box-border h-6 w-6 before:accent-auto before:text-sky-500 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-500 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-full w-full">
+                                                    <path d="M17.1761 4H19.9362L13.9061 10.7774L21 20H15.4456L11.0951 14.4066L6.11723 20H3.35544L9.80517 12.7508L3 4H8.69545L12.6279 9.11262L17.1761 4ZM16.2073 18.3754H17.7368L7.86441 5.53928H6.2232L16.2073 18.3754Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/partners-in-excellence/" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-sky-600 box-border h-6 w-6 before:accent-auto before:text-sky-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-sky-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-6 w-6">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.youtube.com/@partnersmn2539" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-red-600 box-border h-6 w-6 before:accent-auto before:text-red-600 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-red-600 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border h-full w-full">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5686 4.77345C21.5163 5.02692 22.2555 5.76903 22.5118 6.71673C23.1821 9.42042 23.1385 14.5321 22.5259 17.278C22.2724 18.2257 21.5303 18.965 20.5826 19.2213C17.9071 19.8831 5.92356 19.8015 3.40294 19.2213C2.45524 18.9678 1.71595 18.2257 1.45966 17.278C0.827391 14.7011 0.871044 9.25144 1.44558 6.73081C1.69905 5.78311 2.44116 5.04382 3.38886 4.78753C6.96561 4.0412 19.2956 4.282 20.5686 4.77345ZM9.86682 8.70227L15.6122 11.9974L9.86682 15.2925V8.70227Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.tiktok.com/@partners_in_excellence" class="text-black text-sm items-center box-border flex leading-[21px] max-w-full">
+                                            <div
+                                                class="text-white box-border h-6 w-6 before:accent-auto before:text-white before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[21px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-open_sans after:accent-auto after:clear-both after:text-white after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[21px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-open_sans"
+                                            >
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="box-border h-full w-full">
+                                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74a2.89 2.89 0 0 1 2.31-4.64a2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section class="sticky bg-zinc-100 border-l-slate-900 border-r-slate-900 border-t-slate-900 box-border block z-[4] border-b bottom-0 md:relative md:bg-white md:hidden md:z-auto md:bottom-auto">
+            <div class="box-border px-[5%]">
+                <div class="items-center box-border flex flex-col justify-start text-center py-2 md:flex-row md:text-start md:py-3">
+                    <div class="items-start box-border flex basis-[0%] grow min-h-[auto] min-w-[auto] text-center mb-4 mx-auto md:items-center md:min-h-0 md:min-w-0 md:text-start md:ml-0 md:mr-8 md:mb-0">
+                        <div class="box-border hidden shrink-0 text-center mr-4 md:block md:text-start">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-border inline-block h-8 max-w-full text-center w-8 md:text-start">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center md:min-h-0 md:min-w-0 md:text-start"><div class="font-semibold box-border text-center md:text-start">Contact Us Now</div></div>
+                    </div>
+                    <div class="box-border flex justify-center min-h-[auto] min-w-[auto] text-center md:justify-normal md:min-h-0 md:min-w-0 md:text-start">
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 mr-4 md:min-h-0 md:min-w-0 md:text-start md:ml-4 md:mr-0">
+                            <a
+                                href="/pages/contact-us.html"
+                                class="text-white text-xs font-bold bg-sky-600 box-border inline-block leading-[18px] text-center border border-cyan-500 px-4 py-2 rounded-[10px] border-solid md:text-base md:leading-6 md:px-5"
+                            >
+                                Contact
+                            </a>
+                        </div>
+                        <div class="box-border min-h-[auto] min-w-[auto] text-center ml-0 md:min-h-0 md:min-w-0 md:text-start md:ml-4">
+                            <a
+                                href="tel:+19527465350"
+                                class="text-black text-xs font-bold bg-white box-border inline-block leading-[18px] text-center border px-4 py-2 rounded-[10px] border-solid border-white md:text-base md:leading-6 md:px-5"
+                            >
+                                952-746-5350
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="/script/accordion.js"></script>
+        <script>
+            function toggleIcon(element) {
+                const plusIcon = element.querySelector('.plus-icon');
+                const crossIcon = element.querySelector('.cross-icon');
+                
+                plusIcon.classList.toggle('hidden');
+                crossIcon.classList.toggle('hidden');
+            }
+        </script>
+    </body>
+</html>
