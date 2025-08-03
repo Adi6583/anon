@@ -1,0 +1,5 @@
+
+            .dropdown:hover .dropdown-menu { display: block !important; }
+            .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+            .accordion-content.active { max-height: 500px; }
+      

@@ -1,0 +1,19 @@
+
+.services-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.services-dropdown:hover .services-menu {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+    .services-dropdown.active .services-menu {
+        display: block !important;
+        opacity: 1 !important;
+    }
+}
+            

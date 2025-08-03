@@ -1,0 +1,27 @@
+
+            .dropdown:hover .dropdown-menu { display: block !important; opacity: 1 !important; }
+            .dropdown-menu { transition: opacity 0.2s ease; }
+            .accordion-content { max-height: 0; transition: max-height 0.3s ease; }
+            .accordion-content.active { max-height: 1000px; }
+            
+            /* Mobile dropdown fixes */
+            @media (max-width: 768px) {
+                .dropdown:hover .dropdown-menu { display: none !important; }
+                .dropdown-menu { 
+                    position: static !important;
+                    background: #d4d4d8 !important;
+                    height: auto !important;
+                    opacity: 0 !important;
+                    overflow: visible !important;
+                }
+            }
+            
+            /* Accordion improvements */
+            .items-stretch.bg-white.box-border.flex-col .items-center.box-border.gap-x-6.flex.justify-between:hover {
+                background-color: #f9fafb;
+            }
+            
+            [class*="h-0"][class*="overflow-hidden"] {
+                transition: max-height 0.3s ease, height 0.3s ease;
+            }
+        

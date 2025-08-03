@@ -1,0 +1,24 @@
+/* Navigation hover effects */
+.services-dropdown {
+  position: relative;
+}
+
+/* Desktop hover effect */
+@media (min-width: 768px) {
+  .services-dropdown:hover .services-menu {
+    display: block;
+    opacity: 1;
+    overflow: visible;
+    height: auto;
+  }
+}
+
+/* Mobile click effect */
+@media (max-width: 767px) {
+  .services-menu.active {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+}

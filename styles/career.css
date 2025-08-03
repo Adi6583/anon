@@ -1,0 +1,27 @@
+
+            .services-dropdown:hover .services-menu,
+            .services-dropdown:focus-within .services-menu { 
+                display: block !important; 
+                opacity: 1 !important; 
+            }
+            .services-menu { 
+                transition: opacity 0.2s ease; 
+            }
+            @media (max-width: 768px) {
+                .services-dropdown:active .services-menu,
+                .services-dropdown.active .services-menu {
+                    display: block !important;
+                    opacity: 1 !important;
+                }
+                .mobile-nav.active {
+                    display: block !important;
+                }
+            }
+            .accordion-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            .accordion-content.active {
+                max-height: 500px;
+            }

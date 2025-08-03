@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+    .dropdown:hover .dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
+    }
+    .dropdown-menu {
+        transition: opacity 0.2s ease;
+        /* Ensure it's hidden by default and has 0 opacity for transition */
+        display: none; /* This will be overridden by JS when needed */
+        opacity: 0; /* This will be overridden by JS when needed */
+    }
+
+    /* Styles for the main navigation when it's active on mobile */
+    @media (max-width: 767px) {
+    nav[role="navigation"]:not(.hidden) {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;         /* Changed from absolute to fixed */
+        top: 0;                  /* Start at the very top */
+        left: 0;                 /* Align to the left */
+        right: auto;             /* Remove right alignment */
+        width: 80vw;             /* Take up 80% of the viewport width */
+        max-width: 320px;        /* Optional: limit max width */
+        height: 100vh;           /* Full viewport height */
+        background-color: #f5f5f5;
+        z-index: 9999;
+        overflow-y: auto;
+        padding-bottom: 24px;
+        border-bottom: 1px solid black;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.08); /* Optional: subtle shadow */
+        align-items: flex-start; /* Align nav links to the left */
+        padding-top: 72px;       /* Space for sticky header if needed */
+    }
+}
+nav[role="navigation"] a:hover {
+    color: #0ea5e9 !important; /* Tailwind sky-500, adjust as needed */
+    transition: color 0.2s;
+}
+
